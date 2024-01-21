@@ -1,0 +1,239 @@
+.battleMain{
+    width: 1200px;
+    height: 620px;
+    background-image: url("/public/bg.png");
+    background-repeat: "no-repeat";
+    background-size: 100%;
+    image-rendering: pixelated;     
+}
+
+.battlePanel{
+    width: 1120px;
+    height: 170px;
+    background: #285068;
+    color: #e0d8e0; 
+    border-radius: 40px;
+    border-width: 20px;  
+    border-style: solid;
+    border-color: #c8a848;   
+    padding: 20px;
+    overflow: hidden;
+}
+
+.battlePanelButtons{   
+    /* FINNISH ME */ 
+    width: 300px;
+    background-color: whitesmoke;
+    margin-top: -40px; 
+    margin-right: -40px;  
+    height: 190px;
+    float: right;
+    overflow: hidden;
+    padding-top: 20px;
+    border-radius: 40px;
+    border-width: 20px;  
+    border-style: solid;
+    border-color: #c8a848;    
+    animation-iteration-count: 1;    
+}
+
+@keyframes hideButtons {
+    from { width: 300px; 
+        border-color: #c8a848
+       }
+    to {  width: 0px;
+        border-color: #285068
+       }
+
+  }
+
+  @keyframes showButtons {
+    from  {  width: 0px;
+        border-color: #285068
+        }
+    to{ width: 300px;
+        border-color: #c8a848 
+       }
+
+  }
+
+.battlePanelText{
+        /* FINNISH ME */ 
+    float: left;
+    font-size: 42px;    
+    position: absolute;
+}
+
+.battlePanelButton{
+        /* FINNISH ME */ 
+    color: #283030;
+    color: #283030;
+    font-weight: bolder;   
+    width: 160px;
+    height: 80px;
+    margin: 10px; 
+    font-size: 24px; 
+    margin-top: 0px;
+    border-radius: 20px;
+    border-width: 10px;  
+    border-style: solid; 
+    border-color: #203800;
+    background: #f8f8d8;
+   
+   
+    
+    font-size: 32px;
+    color: #203800;   
+}
+
+.pokeImg{
+    width: 288px;
+    height: 288px;
+    margin-right: 20px;
+    margin-left: 20px;
+    background-repeat: "no-repeat";
+    background-size: 100%;
+    image-rendering: pixelated;
+         
+} 
+.pokeShowEnemy{
+    opacity: 0;
+    animation: showPoke 2s linear forwards;
+   
+}
+
+
+.pokeShowOur{
+    opacity: 0;
+    animation: showPoke 2s linear forwards;
+    animation-delay: 4s;
+}
+
+.pokeShowDetailEnemy{
+    opacity: 0;
+    animation: showDetail .75s linear forwards;
+    animation-delay: 2.5s;
+}
+
+.pokeShowDetailOur{
+    opacity: 0;
+    animation: showDetailOur .75s linear forwards;
+    animation-delay: 6s;
+}
+@keyframes showDetail {
+    0% {
+        opacity: 100;
+        
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        
+      } 
+      100% {
+        opacity: 100;
+        transform: scaleX(1);
+        transform-origin: bottom right;
+        
+        
+      }
+  }
+
+  @keyframes showDetailOur {
+    0% {
+        opacity: 100;
+        
+        transform: scaleX(0);
+        transform-origin: bottom left;
+        
+      } 
+      100% {
+        opacity: 100;
+        transform: scaleX(1);
+        transform-origin: bottom left;
+        
+        
+      }
+  }
+@keyframes showPoke {
+    0% {
+        opacity: 100;
+        transform: scale(.1);
+        filter: grayscale(100%);
+      } 
+      100% {
+        opacity: 100;
+        transform: scale(1);
+        filter: grayscale(0);
+      }
+  }
+.anim{
+    animation: blinker .5s step-start forwards;
+}
+
+@keyframes blinker {
+    0% {
+        opacity: 100;
+      }
+    25% {
+        opacity: 0;
+      }
+    50% {
+      opacity: 100;
+    }
+    75% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 100;
+      }
+  }
+
+.enemyPoke{
+    display: flex;
+    height: 50%;
+    float: right;    
+}
+
+.ourPoke{
+    display: flex;
+    width: 100%;
+    height: 50%;
+}
+
+.hpBar{
+    border-radius: 10px;
+    width: 250px;
+    height: 32px;
+    margin-top: 15px;
+    background: black;
+    position: relative;
+}
+
+.hpBarFill{
+    border-radius: 9px;
+    transition: width 1.5s, background-color 1.5s;
+    height: 100%;
+    background: #70f8a8;
+}
+
+.pokeDetail{
+    border-width: 5px 5px 20px 5px;    
+    border-style: solid;
+    border-color: #203800;
+    background: #f8f8d8;
+    height: 80px;
+    padding: 20px;
+    margin-top: 100px;
+    font-size: 32px;
+    color: #203800;   
+}
+
+.hpBarText{
+    top: 50%;
+    left: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+}
+
